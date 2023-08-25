@@ -1,6 +1,8 @@
 package routes
 
 import (
+	"mygin/controllers/admin"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -10,7 +12,7 @@ func UserRegister(e *gin.Engine) {
 	{
 		UserRouters.POST("/login", loginHandler)
 		UserRouters.POST("/logout", logoutUserHanler)
-		UserRouters.POST("/add")
+		UserRouters.GET("/userlist", admin.AdminController{}.UserIndex)
 		// ……
 	}
 }

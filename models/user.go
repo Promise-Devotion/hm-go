@@ -1,14 +1,14 @@
 package models
 
 type User struct {
-	Userid    int
-	Firstname string
-	Lastname  string
-	Nickname  string
-	Email     string
-	sex       int
+	UserId    int    `json:"userid"`
+	FirstName string `json:"firstname"`
+	LastName  string `json:"lastname"`
+	NickName  string `json:"nickname"`
+	Email     string `json:"email"`
+	Sex       int    `json:"sex"`
 }
 
-func (User) Tablename() string {
+func (User) TableName() string {
 	return "t_user"
 }
