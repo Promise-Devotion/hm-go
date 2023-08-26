@@ -13,6 +13,7 @@ func UserRegister(e *gin.Engine) {
 		UserRouters.POST("/login", loginHandler)
 		UserRouters.POST("/logout", logoutUserHanler)
 		UserRouters.GET("/userlist", admin.AdminController{}.UserIndex)
+		UserRouters.GET("/getuser", admin.AdminController{}.UserOne)
 		// ……
 	}
 }
